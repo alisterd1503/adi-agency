@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font: bold;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #scrollBtn:hover {
+    background-color: rgb(224, 191, 2);
+    color: black;
+  }
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+nav {
+    max-width: 80%;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1rem;
+    background-color: #000000;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border-bottom: 1px solid gold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.dropdown-menu {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    right: 46%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    list-style: none; /* Remove bullet points */
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    margin-bottom: 15px; /* Adjust the value based on your preferred spacing */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e6b42d;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e6b42d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #7b6529;
+}
+
+.unit {
+    display: flex;
+}
+
+.buttonContainer {
+    max-width: 80%;
+    margin: auto;
+    padding: 5rem 2rem; /* Keep this padding */
+    border: 1px solid black;
+    background-color: black;
+    margin-bottom: 50px;
+    margin-top:-150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+}
+
+.viewbtn {
+    padding: 0.5rem 25rem;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #e6b42d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewbtn:hover {
+    background-color:#e6b52dd3;
+    transition: all 0.3s ease;
+}
+
+.stacked {
+    width: 50%; /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.duo {
+    width: 50%; /* Adjust the width as needed */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.box {
+    margin-bottom: 20px; /* Adjust the spacing between the boxes */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.side-by-side {
+    width: 50%; /* Adjust the width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.side-by-side img {
+    width: 90%; /* Adjust the percentage as needed */
+    height: 100%;
+}
+
+#clients .side-by-side img {
+    border: none;
+    border-radius: 10px;
+}
+
+.client-container {
+    max-width: 80%;
+    margin: auto;
+    padding: 5rem 2rem; /* Keep this padding */
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    padding: 5rem 2rem; /* Keep this padding */
+    border-top: 1px solid gold;
+    border-bottom: 1px solid gold;
+    background-color: black;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.tempcontainer {
+    max-width: 80%;
+    margin: auto;
+    padding: 5rem 2rem; /* Keep this padding */
+    border: 1px solid black;
+    background-color: black;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+header .video video {
+    width: 100%; /* Set the width to 100% of its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.video {
+    border: 0.5px solid white;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #e6b42d;
+    z-index: -1;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.tempheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+    padding: 2rem;
+    white-space: nowrap; /* Prevent line break */
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #d81d5b;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.right-arrow {
+    vertical-align: middle;
+}
+
+section .tempheader{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center; /* Align items vertically in the centre */
+}
+
+.card-logo {
+    font-size: 25px;
+    color: gold;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.features .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+
+    background-color: #181817;
+    padding: 1rem;
+    border: 2px solid gold;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card a{
+    align-self: flex-start;
+}
+
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #e6b42d;
+    padding: 4px 6px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover{
+    color: #e6b42d;
+}
+
+.sub-header{
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 80px;
+}
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 1rem;
+}
+
+footer .column .logo{
+    max-width: 100px;
+}
+
+footer .column p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a{
+    color: #ccc;
+    padding: 0px 8px;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    color: #e6b42d;
+}
+
+footer .column h4{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a{
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover{
+    color: #e6b42d;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.unit h3{
+    color: white;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    background-color: #e6b42d;
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: black;
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #e6b42d;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    width: 100%;
+    margin-top:20px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #e6b52dcd;
+    transition: all 0.3s ease;
+}
+
+/* Add a background color and some padding around the form */
+.contactus {
+    max-width: 80%;
+    margin: auto;
+    padding: 5rem 2rem; /* Keep this padding */
+    border-top: 1px solid gold;
+    border-bottom: 1px solid gold;
+    background-color: black;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.contactus form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactus label {
+    color: white;
+}
+
+#dropDown {
+    color: white;
+}
+
+.contactus h2 {
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+#enquiry {
+    width: 100%;  /* Makes the dropdown as wide as the container */
+    padding: 10px;  /* Padding for better appearance */
+    font-size: 1rem;  /* Adjust the font size if necessary */
+    border-radius: 5px;  /* Slight rounding of the corners for consistency */
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px){
+    .nav-links {
+        display: flex; /* Ensure that the links are always visible on smaller screens */
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .container {
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .blur {
+        box-shadow: 0 0 1000px 50px #000000;
+    }
+
+    body{
+        background-color: #000000;
+    }
+
+    .container,
+    nav,
+    .buttonContainer{
+        max-width: 100%;
+    }
+    
+    nav {
+        margin-bottom:1px;
+        border-bottom: none;
+    }
+
+    .contactus {
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .container {
+        margin-bottom:-80px
+    }
+
+    .container .header {
+        margin-bottom: -50px;
+        font-size: 2rem;
+    }
+
+    .container .sub-header {
+        margin-top: 70px;
+        margin-bottom:30px;
+    }
+
+    .unit {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .stacked,
+    .side-by-side {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .buttonContainer {
+        margin-top:-180
+    }
+
+    .viewbtn {
+        padding: 0.5rem 4rem; /* Adjust padding for smaller screens */
+        width: auto; /* Allow the button to shrink to its content */
+        display: inline-block; /* Ensure the button is displayed inline */
+    }
+
+
+    header .image::before{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+
+    .duo{
+        width:95%;
+    }
+
+    .dropdown-menu {
+        right: 30%;
+    }
+
+    .contactus {
+        max-width: 100%;
+    }
+}
