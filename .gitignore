@@ -1,0 +1,26 @@
+# OS generated files
+.DS_Store                 # macOS
+Thumbs.db                 # Windows
+
+# Node.js (if you're using npm or yarn)
+node_modules/             # Node.js packages
+npm-debug.log             # npm debug logs
+yarn-error.log            # Yarn error logs
+
+# Environment variables (if applicable)
+.env                      # Environment variables for local development
+
+# Build directories (if applicable)
+dist/                     # Distribution files (compiled/minified)
+build/                    # Build output directory
+out/                      # Output files
+
+# IDE and Editor specific files
+.vscode/                  # Visual Studio Code settings
+.idea/                    # JetBrains IDE settings
+*.swp                     # Swap files (for editors like Vim)
+*.log                     # Log files
+
+# Miscellaneous
+*.tmp                     # Temporary files
+*.bak                     # Backup files
