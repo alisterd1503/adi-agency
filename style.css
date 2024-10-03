@@ -603,6 +603,10 @@ input[type=submit]:hover {
 
 @media (max-width: 600px){
 
+    #scrollBtn {
+        display: none;
+    }
+
     .container {
         border-top: none;
         border-bottom: none;
